@@ -1,6 +1,7 @@
 package com.example.OOPS.collections;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ArrayListExample {
@@ -29,7 +30,18 @@ public class ArrayListExample {
         Book b2=new Book(100,"Java","James Gosling");
         bookList.add(b2);
         bookList.add(new Book(100,"Tell me your dreams","Sidney Sheldon"));
+        bookList.add(new Book(102,"High Living","Robin Hood"));
         System.out.println(bookList);
+
+        Iterator<Book> itr1=bookList.iterator();
+        while(itr1.hasNext()){
+            System.out.println(itr1.next());
+        }
+
+        Iterator<String> itr=list1.iterator();
+        while(itr.hasNext()){
+            System.out.println(itr.next());
+        }
 
     }
 }
