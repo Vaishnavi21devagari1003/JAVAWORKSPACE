@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Multiplication Table Generator</h2>
+
+<script>
+
+    let rows = parseInt(prompt("Enter number of rows:"));
+    let cols = parseInt(prompt("Enter number of columns:"));
+
+    document.write("<table>");
+
+    for (let i = 1; i <= rows; i++) {
+        document.write("<tr>");
+        for (let j = 1; j <= cols; j++) {
+            document.write("<td>" + (i * j) + "</td>");
+        }
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+</script>
+
+</body>
+</html>
